@@ -15,7 +15,7 @@ def get_tokens_and_spacing(node, code):
     spaces = []
 
     for i, token in enumerate(tokens):
-        token_kinds.append(str(token.kind))
+        token_kinds.append(str(token.kind).replace("TokenKind.", "").lower())
         token_spellings.append(token.spelling)
 
         if i < len(tokens) - 1:
